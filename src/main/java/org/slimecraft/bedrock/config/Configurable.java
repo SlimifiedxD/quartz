@@ -4,8 +4,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Map;
 
-public interface Configurable<T extends Configurable<T>> {
-    @NotNull Map<String, Object> toConfig();
+public interface Configurable<T> {
+    @NotNull Map<String, Object> toConfig(T value);
 
-    @NotNull T fromConfig(Map<String, Object> representation);
+    @NotNull T fromConfig(@NotNull Map<String, Object> representation);
 }

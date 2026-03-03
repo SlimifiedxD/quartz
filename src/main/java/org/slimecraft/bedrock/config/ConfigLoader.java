@@ -5,6 +5,8 @@ public interface ConfigLoader {
 
     <T> void save(T config);
 
+    <T> void register(Configurable<T> configurable);
+
     static ConfigLoader yaml() {
         return YamlConfigLoader.instance();
     }

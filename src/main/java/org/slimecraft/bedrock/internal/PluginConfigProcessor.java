@@ -162,7 +162,7 @@ public final class PluginConfigProcessor extends AbstractProcessor {
                                             
                                             public class GeneratedBedrockInit {
                                                 static {
-                                                    Bedrock.init(JavaPlugin.getProvidingPlugin(%s));
+                                                    Bedrock.bedrock().init(JavaPlugin.getProvidingPlugin(%s));
                                                 }
                                             }
                                             """.formatted(codeName));

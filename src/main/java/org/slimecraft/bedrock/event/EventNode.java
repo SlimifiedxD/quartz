@@ -106,7 +106,8 @@ public final class EventNode {
 
     private <T> void fireEventNodeRecursive(T event) {
         fireEventNode(event);
-        getChildren().forEach(child -> fireEventNodeRecursive(event));
+        // TODO: fix recursion so it doesnt give a stack overflow
+        //getChildren().forEach(child -> fireEventNodeRecursive(event));
     }
 
     private <T> void fireEventNode(T event) {

@@ -49,6 +49,11 @@ public class YamlConfigLoader implements ConfigLoader {
         throw new IllegalArgumentException("Not yet implemented!");
     }
 
+    @Override
+    public <T> void register(Configurable<T> configurable) {
+        throw new IllegalArgumentException("Not yet implemented!");
+    }
+
     private <T> void configureYmlConfigFromFile(T config, File file) throws IOException, IllegalAccessException {
         final Yaml yaml = new Yaml();
         Map<String, Object> contents;

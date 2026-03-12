@@ -2,6 +2,7 @@ plugins {
     `java-library`
     `maven-publish`
     kotlin("jvm")
+    kotlin("kapt") version "2.3.10"
 }
 
 group = "com.github.SlimifiedxD"
@@ -17,6 +18,7 @@ repositories {
 }
 
 dependencies {
+    kapt(project(":"))
     api("io.github.classgraph:classgraph:4.8.173")
     api("fr.mrmicky:fastboard:2.1.5")
     api("com.github.SlimifiedxD.funmands:funmands-paper:fcdd800552")

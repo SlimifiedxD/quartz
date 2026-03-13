@@ -4,3 +4,5 @@ pluginManagement {
     }
 }
 rootProject.name = "bedrock"
+include("processor")
+include("annotation")

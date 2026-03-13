@@ -1,13 +1,15 @@
-package org.slimecraft.bedrock.internal;
+package org.slimecraft.bedrock.processor;
 
-import org.jetbrains.annotations.ApiStatus;
 import org.slimecraft.bedrock.annotation.plugin.Plugin;
-import org.slimecraft.bedrock.dependency.LoadOrder;
-import org.slimecraft.bedrock.dependency.LoadStage;
+import org.slimecraft.bedrock.annotation.plugin.dependency.LoadOrder;
+import org.slimecraft.bedrock.annotation.plugin.dependency.LoadStage;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 
-import javax.annotation.processing.*;
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.Filer;
+import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.*;
 import javax.lang.model.type.DeclaredType;
@@ -26,7 +28,6 @@ import java.util.Set;
 /**
  * This class processes annotations for {@link Plugin}s. This is not meant to be used by end users.
  */
-@ApiStatus.Internal
 @SupportedSourceVersion(SourceVersion.RELEASE_21)
 public final class PluginConfigProcessor extends AbstractProcessor {
     @Override

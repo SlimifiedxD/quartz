@@ -1,4 +1,4 @@
-package org.slimecraft.bedrock.dependency;
+package org.slimecraft.bedrock.annotation.plugin.dependency;
 
 /**
  * Represents the order in which a dependency is loaded.

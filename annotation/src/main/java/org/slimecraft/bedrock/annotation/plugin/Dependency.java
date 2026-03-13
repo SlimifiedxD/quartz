@@ -1,7 +1,8 @@
 package org.slimecraft.bedrock.annotation.plugin;
 
-import org.slimecraft.bedrock.dependency.LoadOrder;
-import org.slimecraft.bedrock.dependency.LoadStage;
+
+import org.slimecraft.bedrock.annotation.plugin.dependency.LoadOrder;
+import org.slimecraft.bedrock.annotation.plugin.dependency.LoadStage;
 
 /**
  * Marks a dependency for a plugin.

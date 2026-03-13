@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    `maven-publish`
 }
 
 group = "com.github.SlimifiedxD"
@@ -18,6 +19,19 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.SlimifiedxD"
+            artifactId = "annotation"
+            version = "1.0-SNAPSHOT"
+
+            from(components["java"])
+        }
+    }
 }
 
 tasks.test {

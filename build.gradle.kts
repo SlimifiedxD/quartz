@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly(project(":annotation"))
+    api(project(":annotation"))
     kapt(project(":processor"))
     api("io.github.classgraph:classgraph:4.8.173")
     api("fr.mrmicky:fastboard:2.1.5")

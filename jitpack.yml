@@ -2,5 +2,5 @@ jdk:
   - openjdk21
 
 modules:
-  - :annotation
-  - :processor
+  - annotation
+  - processor

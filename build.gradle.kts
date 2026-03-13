@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    kapt(project(":"))
+    kapt(files(sourceSets.main.get().output))
     api("io.github.classgraph:classgraph:4.8.173")
     api("fr.mrmicky:fastboard:2.1.5")
     api("com.github.SlimifiedxD.funmands:funmands-paper:fcdd800552")
